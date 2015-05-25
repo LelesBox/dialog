@@ -30,3 +30,4 @@
 		}
 	});
 ```
+![img](https://coding.net/u/shorly/p/dialog.js/git/raw/master/20150525142459.png)
