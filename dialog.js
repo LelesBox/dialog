@@ -46,6 +46,10 @@ function dialog(obj) {
 				setDialog(obj.title, obj.content);
 				if (obj.effectShow) {
 					obj.effectShow($("#dialog"));
+				}else{
+					$("#dialog").css({
+						"display": "block"
+					});
 				}
 			});
 
