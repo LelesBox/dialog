@@ -2,6 +2,8 @@
 
 该dialog需要JQuery支持;
 
+做这个的初衷是因为这个`learn-js` https://github.com/nimojs/learn-js/tree/gh-pages/package/dialog
+
 #dialog方法
 参数
 
