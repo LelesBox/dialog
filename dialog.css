@@ -8,6 +8,7 @@
 	width: 500px;
 	z-index: 999;
 	border:15px solid gray;
+	display: none;
 	background-color: white;
 }
 #dialog-bg{
@@ -17,6 +18,7 @@
 	right: 0;
 	bottom: 0;
 	z-index: 998;
+	display: none;
 	background-color: black;
 	opacity: 0.7;
 }
@@ -48,9 +50,12 @@
 #dialog-close-cha{
 	height: 30px;
 	border-radius: 15px;
-	transform:rotate(45deg);
 	cursor: pointer;
 	position: relative;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg); 
+	-o-transform: rotate(45deg);
+	transform:rotate(45deg);
 }
 #dialog-close-cha-hori{
 	position: absolute;
