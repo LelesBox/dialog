@@ -13,7 +13,8 @@
 6.onClose:关闭后执行的方法
 
 例子
->	dialog({
+```
+  dialog({
 		trigger: '#btn',
 		content: '<strong>哼哼哈嘿</strong>',
 		title: 'I am Title',
@@ -28,3 +29,4 @@
 		onClose: function() {
 		}
 	});
+```
