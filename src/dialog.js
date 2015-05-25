@@ -12,16 +12,22 @@ $(document).ready(function() {
 			// 淡出显示
 			$element.fadeOut(500)
 		},
-		onClose: function() {
-		}
+		onClose: function() {}
 	});
+
+	// var script=document.getElementsByTagName("script");
+	// var test=script.getAttribute("scr");
+
 })
 
 
 // 封装成dialog组件,接受对象参数
 function dialog(obj) {
 	if (!document.getElementById("dialog")) {
-		createDialog();
+		// 获取当前路径，用于设置css引入路径
+		var dialogpath = $("script[src$='dialog.js']").attr("src");
+		var prefix = dialogpath.substr(0, dialogpath.indexOf("dialog.js"));
+		createDialog(prefix);
 		document.onkeydown = function(event) {
 			var e = event || window.event || arguments.callee.caller.arguments[0];
 			if (e && e.keyCode == 27) { // 按 Esc 
@@ -46,7 +52,7 @@ function dialog(obj) {
 				setDialog(obj.title, obj.content);
 				if (obj.effectShow) {
 					obj.effectShow($("#dialog"));
-				}else{
+				} else {
 					$("#dialog").css({
 						"display": "block"
 					});
@@ -72,9 +78,9 @@ function dialog(obj) {
 }
 
 // 创建dom
-function createDialog() {
+function createDialog(prefix) {
 
-	loadCss("./dialog.css");
+	loadCss(prefix + "dialog.css");
 	var body = document.getElementsByTagName("body")[0];
 	var bgdiv = document.createElement("div");
 	var dialogdiv = document.createElement("div");
@@ -149,4 +155,3 @@ function loadCss(filename) {
 	var head = document.getElementsByTagName("head")[0];
 	head.appendChild(dialogCss);
 }
-
